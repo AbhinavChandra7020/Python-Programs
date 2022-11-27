@@ -7,8 +7,8 @@ while True:
     if inp == 'done':
         break
     ch = random.choice(list1)  # Letting the computer make a choice against the user
-    ch = ch.lower()
-    ch.strip()
+    inp = inp.lower()
+    inp.strip()
     print(ch)
     if ch == inp:  # Comparing choices between user and the computer
         print("Go again")
