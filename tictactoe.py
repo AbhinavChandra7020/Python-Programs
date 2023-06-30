@@ -1,7 +1,6 @@
 print('Welcome to Tic-Tac-Toe, Type X or O for your command followed with the location in the grid in the following \n'
       'manner. The Rows are arranged in A,B,C and columns in 1,2,3. So if you want to play in the first row and second'
       '\ncolumn, be sure to type B2!\n')
-
 Row1 = ['A1', 'A2', 'A3']
 Row2 = ['B1', 'B2', 'B3']
 Row3 = ['C1', 'C2', 'C3']
@@ -57,7 +56,7 @@ def CRow(RC):
 def WinningCheck():
     if Row1[0] == Row1[1] == Row1[2]:
         return 'W'
-    if Row2[0] == Row2[1] == Row3[2]:
+    if Row2[0] == Row2[1] == Row2[2]:
         return 'W'
     if Row3[0] == Row3[1] == Row3[2]:
         return 'W'
@@ -77,7 +76,7 @@ def WinningCheck():
 while True:
     if counter == 9:
         Display()
-        print(prevIn,'wins')
+        print(prevIn, 'wins')
         break
     Display()
 
@@ -110,6 +109,7 @@ while True:
     status = WinningCheck()
     counter += 1
     if status == 'W':
-        print(prevIn,'Wins!')
+        print(prevIn, 'Wins!')
+        Display()
         break
     print("Next player's turn")
